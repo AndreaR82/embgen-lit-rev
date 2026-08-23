@@ -15,8 +15,32 @@ footing, and works out what to change.
 | File | What |
 |---|---|
 | **[`llm-as-a-judge/METHODOLOGY-RECOMMENDATION.md`](llm-as-a-judge/METHODOLOGY-RECOMMENDATION.md)** | **The proposal.** Eight ranked problems, a tiered fix list, and a seven-day schedule. |
+| [`llm-as-a-judge/PAPERS.md`](llm-as-a-judge/PAPERS.md) | Every paper, with a link to its source |
 | [`llm-as-a-judge/claude-papers/README.md`](llm-as-a-judge/claude-papers/README.md) | Guide to the paper collection and its provenance |
 | [`llm-as-a-judge/claude-papers/code/judge_stats.py`](llm-as-a-judge/claude-papers/code/judge_stats.py) | Runnable statistics toolkit |
+
+## Branches
+
+| Branch | Contents | Clone size |
+|---|---|---|
+| `main` | Everything, including all 119 PDFs | ~278 MB |
+| **`no-pdfs`** | **Notes, methodology and code only — no PDFs** | **~1 MB** |
+
+For a restricted or bandwidth-limited environment, clone the lightweight branch. It shares no history
+with `main`, so none of the PDF blobs are transferred:
+
+```bash
+git clone --single-branch --branch no-pdfs https://github.com/AndreaR82/embgen-lit-rev.git
+```
+
+Then re-download the papers from a machine with open web access:
+
+```bash
+bash llm-as-a-judge/claude-papers/fetch_papers.sh   # run it twice; some requests get rate-limited
+```
+
+Every paper's canonical link is also listed in [`llm-as-a-judge/PAPERS.md`](llm-as-a-judge/PAPERS.md),
+so the collection can be rebuilt by hand if scripted downloads are blocked.
 
 ## Layout
 
