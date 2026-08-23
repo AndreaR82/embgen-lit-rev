@@ -1,0 +1,8 @@
+# This branch deliberately excludes the PDFs -- see PAPERS.md to re-download them.
+*.pdf
+
+__pycache__/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+.venv/
